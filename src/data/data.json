@@ -1,0 +1,1324 @@
+{
+  "home": {
+    "banner": [
+      {
+        "url": "/src/assets/public_images/home_banner1.jpg"
+      },
+      {
+        "url": "/src/assets/public_images/home_banner2.jpg"
+      },
+      {
+        "url": "/src/assets/public_images/home_banner3.jpg"
+      },
+      {
+        "url": "/src/assets/public_images/home_banner4.jpg"
+      }
+    ],
+    "aboutUs": {
+      "title": {
+        "subTitle": "关于云从科技",
+        "bigTitle": "about us"
+      },
+      "content": {
+        "title": "源自计算机视觉之父的人脸识别技术，一支人工智能行业国家队 ",
+        "text": "云从科技是一家从中科院重庆研究院孵化的专注于计算机视觉与人工智能的高科技企业；是中国银行业人脸识别第一大供应商；全国包括农行、建行、中行、交行等全国50多家银行已采用公司产品；在安防领域，公司产品已在22个省上线实战，为包括北京西站、博鳌亚洲论坛、2017金砖国家峰会、边疆地区等安防出力，获得公安部高度认可，引领了公安行业战法的变革；在民航领域，产品已覆盖80%的枢纽机场。"
+      }
+    },
+    "ourProducts": {
+      "title": {
+        "subTitle": "能力引擎产品",
+        "bigTitle": "our products"
+      },
+      "content": {
+        "text": "提供FaceGo-Smart、FaceGo-Cube。云之眼、商用SDK滿足各行各业对于人脸识别能力的不同需求。",
+        "engineList": [
+          {
+            "pic": "/src/assets/public_images/engineListPic1.jpg",
+            "title": "云之眼身份认证服务引擎",
+            "text": "专注于提供身份认证服务，同时支持公有云、私有云方式部署，可让产品快速集成身份认证相关功能。"
+          },
+          {
+            "pic": "/src/assets/public_images/engineListPic2.jpg",
+            "title": "云从商用SDK",
+            "text": "一套离线人脸识别基础接口，具备易集成，高性能的特点，方便客户定制开发人脸识别相关功能。"
+          },
+          {
+            "pic": "/src/assets/public_images/engineListPic3.jpg",
+            "title": "云从人脸识别引擎",
+            "text": "一套大数据人脸检索引擎，广泛应用于公安、轻轨、机场等领域，具有亿级底库秒级检索的处理能力。"
+          },
+          {
+            "pic": "/src/assets/public_images/engineListPic4.jpg",
+            "title": "FaceGo-Smart",
+            "text": "一款支持一键式部署的轻量级人脸监控引擎。整合了监控相机接入，人脸抓拍，人脸检索，告警推送等核心业务功能。 "
+          }
+        ]
+      }
+    },
+    "ourAdvantages": {
+      "title": {
+        "subTitle": "产品优势",
+        "bigTitle": "our advantages"
+      },
+      "content": {
+        "text": "云从科技先进的人脸识别算法，拥有多项独家专利技术，超强机动能力，为各行各业赋能人脸识别能力。",
+        "advantagesList": [
+          {
+            "index":"1",
+            "pic": "/src/assets/public_images/icon1.png",
+            "picActive": "/src/assets/public_images/icon1_active.png",
+            "title": "先进性",
+            "text": "采用云从科技先进的人脸识别算法SDK，拥有多项独家专利技术。"
+          },
+          {
+            "index":"2",
+            "pic": "/src/assets/public_images/icon2.png",
+            "picActive": "/src/assets/public_images/icon2_active.png",
+            "title": "易用性",
+            "text": "提供基于C语言、JAVA语言、COM组件等方式的访问接口。"
+          },
+          {
+            "index":"3",
+            "pic": "/src/assets/public_images/icon3.png",
+            "picActive": "/src/assets/public_images/icon3_active.png",
+            "title": "扩展性",
+            "text": "系统留有功能扩展接口，可根据用户要求扩展功能，并结合相关的国际标准或工业标准执行。"
+          },
+          {
+            "index":"4",
+            "pic": "/src/assets/public_images/icon4.png",
+            "picActive": "/src/assets/public_images/icon4_active.png",
+            "title": "易维护",
+            "text": "提供方便的网页界面可查询各个业务处理结果，包括业务日志、业务图片、算法性能统计、异常查询等。"
+          }
+        ]
+      }
+    },
+    "ourCases": {
+      "title": {
+        "subTitle": "合作案例",
+        "bigTitle": "our case of success"
+      },
+      "content": {
+        "text": "数以万计的开发者和客户采用云从科技能力引擎打造更智慧的应用。",
+        "caseList": [
+          {
+            "casePic": "/src/assets/public_images/casePic1.jpg",
+            "casePicTitle": "中国招商银行",
+            "casePicDetail": "中国招商银行业务提升80%"
+          },
+          {
+            "casePic": "/src/assets/public_images/casePic2.jpg",
+            "casePicTitle": "中国银行",
+            "casePicDetail": "中国银行业务提升80%"
+          },
+          {
+            "casePic": "/src/assets/public_images/casePic3.jpg",
+            "casePicTitle": "中国农业银行",
+            "casePicDetail": "中国农业银行业务提升80%"
+          },
+          {
+            "casePic": "/src/assets/public_images/casePic4.jpg",
+            "casePicTitle": "乐视车联",
+            "casePicDetail": "乐视车联业务提升80%"
+          },
+          {
+            "casePic": "/src/assets/public_images/casePic5.jpg",
+            "casePicTitle": "中国建设银行银行",
+            "casePicDetail": "中国建设银行业务提升80%"
+          }
+        ]
+      }
+    },
+    "contactUs": {
+      "greetingWords": "准备好开始使用了吗？那就行动吧！立即联系我们。",
+      "smallWords": "现在注册，免费试用FaceDNA所有引擎能力，让你的应用读懂世界、认知世界、感知世界。"
+    }
+  },
+  "publicFooter": {
+    "text": "Copyright© 2018 渝ICP备15087156号 重庆云从信息科技有限公司. All Rights Reserved. CloudWalk Technology Co., Ltd.."
+  },
+  "faceGoSmart": {
+    "banner": {
+      "advertise": {
+        "biggerTitle": "FaceGo-Smart",
+        "mediumTitle": "云从能力引擎",
+        "smallTitle": "引领新时代人工智能，助力制定人工智能行业新标准！"
+      },
+      "picture": "/src/assets/products_images/facegoSmart_banner.jpg"
+    },
+    "introduce": {
+      "title": {
+        "subTitle": "introduce",
+        "bigTitle": "FACEGo-Smart产品介绍"
+      },
+      "content": {
+        "pic": "/src/assets/products_images/intro_pic.jpg",
+        "title": "具备实时监控、人脸抓拍和底库照片实时对比的能力",
+        "text": "FaceGo-Smart是一款用于中小规模监控场景下的轻量级人脸识别引擎系统，集成云从科技最新的人脸识别算法，广泛应用于各中小规模业务场景，如：小区、物业、园区、楼宇、公安、办公区、学校等。产品主要以纯软件平台或软硬一体的方式提供给物业、园区、楼宇、办公区等民用场景的管理部门，管理部门通过在局域网内部署网络摄像机并将相机接入到平台。实现对终端相机、人脸、比对识别信息等的统一集中管理以及区域视频监控、联网告警、入侵告警等安防功能。 "
+      }
+    },
+    "features": {
+      "title": {
+        "subTitle": "Features",
+        "bigTitle": "产品功能"
+      },
+      "content": {
+        "text": "易集成、稳定高性能的产品是我们定义产品的基本要求。",
+        "featuresList": [
+          {
+            "pic": "/src/assets/products_images/smart_fun_list1.jpg",
+            "title": "实时监控",
+            "text": "精准定位图中人脸，获得眼、口、鼻等72个关键点位置，能够快速准确的对人脸进行检测并定位，输出人脸在图片中的位置。该技术可适应不同角度、光照、表情、遮挡、年龄的人脸等各种实际环境。"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_fun_list2.jpg",
+            "title": "抓拍记录、对比推送",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_fun_list3.jpg",
+            "title": "可同时接入多路视频",
+            "text": "精准定位图中人脸，获得眼、口、鼻等72个关键点位置，能够快速准确的对人脸进行检测并定位，输出人脸在图片中的位置。该技术可适应大角度侧脸，遮挡，模糊，表情变化等各种实际环境。"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_fun_list4.jpg",
+            "title": "灵活的底库管理",
+            "text": "精准定位图中人脸，获得眼、口、鼻等72个关键点位置，能够快速准确的对人脸进行检测并定位，输出人脸在图片中的位置。该技术可适应大角度侧脸，遮挡，模糊，表情变化等各种实际环境。"
+          }
+        ]
+      }
+    },
+    "advantages": {
+      "title": {
+        "subTitle": "advantages",
+        "bigTitle": "产品优势"
+      },
+      "content": {
+        "advanList1": [
+          {
+            "index":"1",
+            "picActive":"/src/assets/products_images/advantage_icon1_active.png",
+            "pic": "/src/assets/products_images/advantage_icon1.png",
+            "title": "先进性",
+            "text": "采用云从科技先进的人脸识别算法，拥有多项独家专利技术。"
+          },
+          {
+            "index":"2",
+            "picActive":"/src/assets/products_images/advantage_icon2_active.png",
+            "pic": "/src/assets/products_images/advantage_icon2.png",
+            "title": "易用性",
+            "text": "接口功能强大，调用灵活方便，无需联网，无需部署。"
+          },
+          {
+            "index":"3",
+            "picActive":"/src/assets/products_images/advantage_icon3_active.png",
+            "pic": "/src/assets/products_images/advantage_icon3.png",
+            "title": "高并发",
+            "text": "兼顾速度和准确度，提供及时的技术支持。"
+          }
+        ],
+        "advanList2": [
+          {
+            "index":"4",
+            "picActive":"/src/assets/products_images/advantage_icon4_active.png",
+            "pic": "/src/assets/products_images/advantage_icon4.png",
+            "title": "易扩展性",
+            "text": "系统结合相关国际标准和工业标准保留功能扩展接口，支持客户进行上层业务应用二次开发。"
+          },
+          {
+            "index":"5",
+            "picActive":"/src/assets/products_images/advantage_icon5_active.png",
+            "pic": "/src/assets/products_images/advantage_icon5.png",
+            "title": "灵活性",
+            "text": "提供多种实例配置规格,灵活调整服务器数量、CPU、GPU、内存、带宽及挂载容量。"
+          },
+          {
+            "index":"6",
+            "picActive":"/src/assets/products_images/advantage_icon6_active.png",
+            "pic": "/src/assets/products_images/advantage_icon6.png",
+            "title": "易维护性",
+            "text": "系统提供方便的网页界面可查询各个业务处理结果，包括人脸业务图片、算法性能统计、抓拍诊断等。"
+          }
+        ]
+      }
+    },
+    "applicationCases": {
+      "title": {
+        "subTitle": "scenarios",
+        "bigTitle": "应用场景"
+      },
+      "content": {
+        "text": "网吧、酒店、机场、驾校、火车站、人脸考勤等多种场合均适合本引擎。",
+        "caseList": [
+          {
+            "pic": "/src/assets/products_images/smart_application_pic1.jpg",
+            "title": "刷脸闸机",
+            "detail": "基于人脸识别，自动识别安检人物面部信息，并进行安检处理，从而提升产品用户体验。",
+            "coop": "合作案例：重庆江北国际机场"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic2.jpg",
+            "title": "人脸识别布控",
+            "detail": "基于人脸识别，自动识别人员信息和身份证信息是否匹配，有效防止冒用他人身份证信息，从而提升产品用户体验。",
+            "coop": "合作案例：重庆江北某网吧"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic3.jpg",
+            "title": "刷脸迎宾",
+            "detail": "基于人脸识别，自动识别为待入住人员信息，快速办理入住手续，从而提升产品用户体验。",
+            "coop": "合作案例：恒大酒店"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic4.jpg",
+            "title": "刷脸考勤",
+            "detail": "基于关键点、人脸属性值信息，匹配预先设定好的业务内容，可用于线上互动娱乐营销，如脸缘测试、颜值比拼等。",
+            "coop": "合作案例：美颜相机"
+          }
+        ]
+      }
+    },
+    "download": {
+      "title": {
+        "subTitle": "download",
+        "bigTitle": "文档下载"
+      },
+      "content": {
+        "list": [
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "新手指南"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "技术白皮书"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "产品说明"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "操作手册"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "安装手册"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "FAQ"
+          }
+        ]
+      }
+    },
+    "contactUs": {
+      "greetingWords": "我们期待与您携手,定义智慧生活，提升人类潜能！",
+      "smallWords": "现在注册，免费试用FaceDNA所有引擎能力，让你的应用读懂世界、认知世界、感知世界。"
+    }
+  },
+  "faceGoCube": {
+    "banner": {
+      "advertise": {
+        "biggerTitle": "云之眼引擎",
+        "mediumTitle": "FaceGo-Cube",
+        "smallTitle": "高准确率、高安全性的身份认证引擎，让身份认证变得更简单！"
+      },
+      "picture": "/src/assets/products_images/facegoCube_banner.jpg"
+    },
+    "introduce": {
+      "title": {
+        "subTitle": "introduce",
+        "bigTitle": "云之眼引擎产品介绍"
+      },
+      "content": {
+        "pic": "/src/assets/products_images/cube_intro_pic.jpg",
+        "title": "具备公有云、私有云方式快速部署的能力",
+        "text": "云之眼身份认证服务引擎是一套快速集成开发平台，通过WebService方式对外提供身份认证相关功能，包括人脸检测、人脸识别等功能。引擎能够进行公有云、私有云方式部署，安全稳定、性能优越、方便实用。引擎接口具有开放性、跨平台性强，用户仅需通过HTTP协议发送命令到服务引擎，即可进行人脸相关算法处理，并返回JSON格式的结果，由此解决了传统意义上使用身份认证技术的各种复杂问题。目前云之眼人脸识别引擎已广泛应用于金融、司法、军队、公安、边检、政府、工厂、教育、医疗、机场及众多企事业单位等领域。 "
+      }
+    },
+    "features": {
+      "title": {
+        "subTitle": "Features",
+        "bigTitle": "产品功能"
+      },
+      "content": {
+        "text": "易集成、稳定高性能的产品是我们定义产品的基本要求。",
+        "featuresList": [
+          {
+            "pic": "/src/assets/products_images/cube-fun_pic1.jpg",
+            "title": "人脸检测",
+            "text": "精准定位图中人脸，获得眼、口、鼻等72个关键点位置，能够快速准确的对人脸进行检测并定位，输出人脸在图片中的位置。该技术可适应不同角度、光照、表情、遮挡、年龄的人脸等各种实际环境。"
+          },
+          {
+            "pic": "/src/assets/products_images/cube-fun_pic2.jpg",
+            "title": "人脸去网纹",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          },
+          {
+            "pic": "/src/assets/products_images/cube-fun_pic3.jpg",
+            "title": "人脸相似度对比",
+            "text": "精准定位图中人脸，获得眼、口、鼻等72个关键点位置，能够快速准确的对人脸进行检测并定位，输出人脸在图片中的位置。该技术可适应大角度侧脸，遮挡，模糊，表情变化等各种实际环境。"
+          },
+          {
+            "pic": "/src/assets/products_images/cube-fun_pic4.jpg",
+            "title": "人脸识别",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          },
+          {
+            "pic": "/src/assets/products_images/cube-fun_pic5.jpg",
+            "title": "身份证识别",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          },
+          {
+            "pic": "/src/assets/products_images/cube-fun_pic6.jpg",
+            "title": "银行卡识别",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          },
+          {
+            "pic": "/src/assets/products_images/cube-fun_pic7.jpg",
+            "title": "动作活体",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          },
+          {
+            "pic": "/src/assets/products_images/cube-fun_pic8.jpg",
+            "title": "静默活体",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          }
+        ]
+      }
+    },
+    "advantages": {
+      "title": {
+        "subTitle": "advantages",
+        "bigTitle": "产品优势"
+      },
+      "content": {
+        "advanList1": [
+          {
+            "index":"1",
+            "picActive":"/src/assets/products_images/advantage_icon1_active.png",
+            "pic": "/src/assets/products_images/advantage_icon1.png",
+            "title": "先进性",
+            "text": "采用云从科技先进的人脸识别算法，拥有多项独家专利技术。"
+          },
+          {
+            "index":"2",
+            "picActive":"/src/assets/products_images/advantage_icon2_active.png",
+            "pic": "/src/assets/products_images/advantage_icon2.png",
+            "title": "易用性",
+            "text": "接口功能强大，调用灵活方便，无需联网，无需部署。"
+          },
+          {
+            "index":"3",
+            "picActive":"/src/assets/products_images/advantage_icon3_active.png",
+            "pic": "/src/assets/products_images/advantage_icon3.png",
+            "title": "统一性",
+            "text": "平台可提供WebService接口为多个应用系统提供统一、集中的生物特征认证服务。"
+          }
+        ],
+        "advanList2": [
+          {
+            "index":"4",
+            "picActive":"/src/assets/products_images/advantage_icon4_active.png",
+            "pic": "/src/assets/products_images/advantage_icon4.png",
+            "title": "易扩展性",
+            "text": "系统结合相关国际标准和工业标准保留功能扩展接口，支持客户进行上层业务应用二次开发。"
+          },
+          {
+            "index":"5",
+            "picActive":"/src/assets/products_images/advantage_icon5_active.png",
+            "pic": "/src/assets/products_images/advantage_icon5.png",
+            "title": "灵活性",
+            "text": "提供多种实例配置规格,灵活调整服务器数量、CPU、GPU、内存、带宽及挂载容量。"
+          },
+          {
+            "index":"6",
+            "picActive":"/src/assets/products_images/advantage_icon6_active.png",
+            "pic": "/src/assets/products_images/advantage_icon6.png",
+            "title": "易维护性",
+            "text": "系统提供方便的网页界面可查询各个业务处理结果，包括人脸业务图片、算法性能统计、抓拍诊断等。"
+          }
+        ]
+      }
+    },
+    "applicationCases": {
+      "title": {
+        "subTitle": "scenarios",
+        "bigTitle": "应用场景"
+      },
+      "content": {
+        "text": "网吧、酒店、机场、驾校、火车站、人脸考勤等多种场合均适合本引擎。",
+        "caseList": [
+          {
+            "pic": "/src/assets/products_images/smart_application_pic1.jpg",
+            "title": "公安政务",
+            "detail": "将繁琐的线下窗口服务等政务流程转为线上的自助服务，在保证身份真实性的情况下，提升了便民服务流程的效率。",
+            "coop": "合作案例：政务大厅"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic2.jpg",
+            "title": "金融",
+            "detail": "将金融、证券、保险、互联网金融等复杂的身份验证流程转为线上自助服务，满足金融行业高安全性要求。",
+            "coop": "合作案例：重庆江北某网吧"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic3.jpg",
+            "title": "社保",
+            "detail": "将社保金发放时的身份验证转为线上流程，极大方便了在外地的老人和不方便出行的老人领取社保金。",
+            "coop": "合作案例：社保局"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic4.jpg",
+            "title": "安全监管",
+            "detail": "对网约车司机进行上岗注册及每天出车的身份核验，确保了人、证、车三要素合一，保证了乘车的安全性。",
+            "coop": "合作案例：滴滴打车"
+          }
+        ]
+      }
+    },
+    "download": {
+      "title": {
+        "subTitle": "download",
+        "bigTitle": "文档下载"
+      },
+      "content": {
+        "list": [
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "新手指南"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "技术白皮书"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "产品说明"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "操作手册"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "安装手册"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "FAQ"
+          }
+        ]
+      }
+    },
+    "contactUs": {
+      "greetingWords": "我们期待与您携手,定义智慧生活，提升人类潜能！",
+      "smallWords": "现在注册，免费试用FaceDNA所有引擎能力，让你的应用读懂世界、认知世界、感知世界。"
+    }
+  },
+  "faceRecognise": {
+    "banner": {
+      "advertise": {
+        "biggerTitle": "云从人脸识别引擎",
+        "mediumTitle": "faceGo-Recognition",
+        "smallTitle": "结合精准人脸识别，全面提升服务质量与顾客体验！"
+      },
+      "picture": "/src/assets/products_images/recogrise_banner.jpg"
+    },
+    "introduce": {
+      "title": {
+        "subTitle": "introduce",
+        "bigTitle": "云从人脸识别引擎产品介绍"
+      },
+      "content": {
+        "pic": "/src/assets/products_images/recogrise_intro.jpg",
+        "title": "具备人脸属性识别、关键点定位、人脸1：1比对、人脸1：N识别等能力",
+        "text": " 云从人脸识别引擎采用自主知识产权的深度学习算法，其识别准确率高达99%以上，人脸识别实际效果也在业界最权威的公开评测比赛中排名世界领先。云从人脸识别引擎性能稳定、安全可靠、具有亿级人脸秒级检索的处理能力。引擎接口具有开放性、跨平台的特点。云从人脸识别引擎支持快速部署，API方便调用，适合各行业的特殊定制。功能模块主要分为：人脸底库管理、人脸特征建模、人脸识别等。用户仅需通过HTTP协议发送命令到服务引擎，即可进行人脸相关算法处理，并返回JSON格式的结果，解决了传统意义上使用人脸比对技术的各种复杂问题。"
+      }
+    },
+    "features": {
+      "title": {
+        "subTitle": "Features",
+        "bigTitle": "产品功能"
+      },
+      "content": {
+        "text": "易集成、稳定高性能的产品是我们定义产品的基本要求。",
+        "featuresList": [
+          {
+            "pic": "/src/assets/products_images/recogrise_fun_pic1.jpg",
+            "title": "人脸检测",
+            "text": "精准定位图中人脸，获得眼、口、鼻等72个关键点位置，能够快速准确的对人脸进行检测并定位，输出人脸在图片中的位置。该技术可适应不同角度、光照、表情、遮挡、年龄的人脸等各种实际环境。"
+          },
+          {
+            "pic": "/src/assets/products_images/recogrise_fun_pic2.jpg",
+            "title": "人脸对比",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          },
+          {
+            "pic": "/src/assets/products_images/recogrise_fun_pic3.jpg",
+            "title": "人脸属性分析",
+            "text": "准确识别10多种人脸属性大类，例如性别、年龄、种族、表情、饰品、胡须、面部动作状态等。可以用于广告定向投放或顾客信息分析，让你秒懂客户心。"
+          },
+          {
+            "pic": "/src/assets/products_images/recogrise_fun_pic4.jpg",
+            "title": "人脸识别",
+            "text": "精准定位图中人脸，获得关键点位置，能够快速准确的根据人脸信息进行1:N单库检索、1:N多库检索、N:M库库检索，具有百万底库毫秒、上亿底库秒级的处理能力。"
+          }
+        ]
+      }
+    },
+    "advantages": {
+      "title": {
+        "subTitle": "advantages",
+        "bigTitle": "产品优势"
+      },
+      "content": {
+        "advanList1": [
+          {
+            "index":"1",
+            "picActive":"/src/assets/products_images/advantage_icon1_active.png",
+            "pic": "/src/assets/products_images/advantage_icon1.png",
+            "title": "算法领先",
+            "text": "采用云从科技先进的人脸识别算法，拥有多项独家专利技术。"
+          },
+          {
+            "index":"2",
+            "picActive":"/src/assets/products_images/advantage_icon2_active.png",
+            "pic": "/src/assets/products_images/advantage_icon2.png",
+            "title": "易用性",
+            "text": "接口功能强大，调用灵活方便，无需联网，无需部署。"
+          },
+          {
+            "index":"3",
+            "picActive":"/src/assets/products_images/advantage_icon3_active.png",
+            "pic": "/src/assets/products_images/advantage_icon3.png",
+            "title": "高并发",
+            "text": "兼顾速度和准确度，提供及时的技术支持。"
+          }
+        ],
+        "advanList2": [
+          {
+            "index":"4",
+            "picActive":"/src/assets/products_images/advantage_icon4_active.png",
+            "pic": "/src/assets/products_images/advantage_icon4.png",
+            "title": "分布式部署",
+            "text": "支持集群技术，实现动态负载均衡，可承载上亿级的海量人脸检索。"
+          },
+          {
+            "index":"5",
+            "picActive":"/src/assets/products_images/advantage_icon5_active.png",
+            "pic": "/src/assets/products_images/advantage_icon5.png",
+            "title": "灵活性",
+            "text": "提供多种实例配置规格,灵活调整服务器数量、CPU、GPU、内存、带宽及挂载容量。"
+          },
+          {
+            "index":"6",
+            "picActive":"/src/assets/products_images/advantage_icon6_active.png",
+            "pic": "/src/assets/products_images/advantage_icon6.png",
+            "title": "易维护性",
+            "text": "系统提供方便的网页界面可查询各个业务处理结果，包括人脸业务图片、算法性能统计、抓拍诊断等。"
+          }
+        ]
+      }
+    },
+    "applicationCases": {
+      "title": {
+        "subTitle": "scenarios",
+        "bigTitle": "应用场景"
+      },
+      "content": {
+        "text": "网吧、酒店、机场、驾校、火车站、人脸考勤等多种场合均适合本引擎。",
+        "caseList": [
+          {
+            "pic": "/src/assets/products_images/smart_application_pic1.jpg",
+            "title": "刷脸门禁考勤",
+            "detail": "通过人脸识别快速录入人脸信息，用户通行时只需刷脸即可完成身份验证。实现企业、商业、住宅等多场景的刷脸进门，提升用户体验。",
+            "coop": "合作案例：重庆江北国际机场"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic2.jpg",
+            "title": "安防监控",
+            "detail": "在银行、机场、商场、市场等人流密集的公共场所对人群进行监控，实现人流自动统计、特定人物的自动识别和追踪。",
+            "coop": "合作案例：重庆江北某网吧"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic3.jpg",
+            "title": "远程身份认证",
+            "detail": "通过离在线混合活体检测，判断用户为真人；公安身份图像与真人图像比对，判断用户是否为本人，完成在线用户身份核真检验。",
+            "coop": "合作案例：恒大酒店"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic4.jpg",
+            "title": "智能相册分类",
+            "detail": "通过人脸检测，自动识别照片库中的人物角色，并分类管理，提升产品用户体验。",
+            "coop": "合作案例：美颜相机"
+          }
+        ]
+      }
+    },
+    "download": {
+      "title": {
+        "subTitle": "download",
+        "bigTitle": "文档下载"
+      },
+      "content": {
+        "list": [
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "新手指南"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "技术白皮书"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "产品说明"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "操作手册"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "安装手册"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "FAQ"
+          }
+        ]
+      }
+    },
+    "contactUs": {
+      "greetingWords": "我们期待与您携手,定义智慧生活，提升人类潜能！",
+      "smallWords": "现在注册，免费试用FaceDNA所有引擎能力，让你的应用读懂世界、认知世界、感知世界。"
+    }
+  },
+  "businessSDK": {
+    "banner": {
+      "advertise": {
+        "biggerTitle": "云从商用SDK",
+        "mediumTitle": "Commercial-SDK",
+        "smallTitle": "离线调用SDK各项能力，轻松打造个性化定制移动应用！"
+      },
+      "picture": "/src/assets/products_images/sdk-banner.jpg"
+    },
+    "introduce": {
+      "title": {
+        "subTitle": "introduce",
+        "bigTitle": "云从商用SDK产品介绍"
+      },
+      "content": {
+        "pic": "/src/assets/products_images/sdk_intro.jpg",
+        "title": "具备多平台设备上离线调用人脸识别的能力",
+        "text": "云从商用SDK，采用云从科技先进人脸识别算法，拥有多项独家专利技术，为客户提供易集成，高性能的人脸识别相关接口。商用SDK包括人脸SDK和红外活体SDK，其中人脸SDK包括人脸检测模块，特征识别模块，属性模块，人脸业务封装模块，提供人脸检测，跟踪，关键点，对齐，质量分，特征提取，特征转换，特征比对，属性识别等接口。红外活体SDK提供红外活体检测接口，需要与人脸检测模块配合使用。商用SDK按照系统可分为windows，linux和android版本；按照授权方式可分为CWKey版本和HaspKey版本；按照Key的性能可分为移动终端低配版，移动终端高配版，标准版，服务版。"
+      }
+    },
+    "features": {
+      "title": {
+        "subTitle": "Features",
+        "bigTitle": "产品功能"
+      },
+      "content": {
+        "text": "易集成、稳定高性能的产品是我们定义产品的基本要求。",
+        "featuresList": [
+          {
+            "pic": "/src/assets/products_images/smart_fun_list1.jpg",
+            "title": "人脸对比",
+            "text": "人脸比对技术可对两张人脸的进行比对，得到两张人脸的相似度，从而判断是否是同一个人。人脸比对采用了多层高斯的矢量化模型描述，并基于双层异构深度神经网络对人脸进行更深层次、全面的处理，得到的人脸特征描述精准，识别准确率高。人脸比对技术适用于身份识别及相似脸查询等应用场景。"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_fun_list2.jpg",
+            "title": "人脸属性分析",
+            "text": "准确识别10多种人脸属性大类，例如性别、年龄、种族、表情、饰品、胡须、面部动作状态等。可以用于广告定向投放或顾客信息分析，让你秒懂客户心。"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_fun_list3.jpg",
+            "title": "人脸关键点检测",
+            "text": "毫秒级别眼、口、鼻轮廓等人脸21、106、240个关键点定位，支持不同精度的人脸关键点定位，该技术可适应大角度侧脸、大表情变化、遮挡、模糊、明暗变化等各种实际环境。"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_fun_list4.jpg",
+            "title": "红外活体检测",
+            "text": "通过红外双目摄像头同时采集近红外和可见光两种图像进行活体判断，防止用户在一些重要环境下用照片面具等手段骗过系统完成验证。"
+          }
+        ]
+      }
+    },
+    "advantages": {
+      "title": {
+        "subTitle": "advantages",
+        "bigTitle": "产品优势"
+      },
+      "content": {
+        "advanList1": [
+          {
+            "index":"1",
+            "picActive":"/src/assets/products_images/advantage_icon1_active.png",
+            "pic": "/src/assets/products_images/advantage_icon1.png",
+            "title": "先进性",
+            "text": "采用云从科技先进的人脸识别算法，拥有多项独家专利技术。"
+          },
+          {
+            "index":"2",
+            "picActive":"/src/assets/products_images/advantage_icon2_active.png",
+            "pic": "/src/assets/products_images/advantage_icon2.png",
+            "title": "易用性",
+            "text": "接口功能强大，调用灵活方便，无需联网，无需部署。"
+          },
+          {
+            "index":"3",
+            "picActive":"/src/assets/products_images/advantage_icon3_active.png",
+            "pic": "/src/assets/products_images/advantage_icon3.png",
+            "title": "高效性",
+            "text": "兼顾速度和准确度，提供及时的技术支持。"
+          }
+        ],
+        "advanList2": [
+          {
+            "index":"4",
+            "picActive":"/src/assets/products_images/advantage_icon4_active.png",
+            "pic": "/src/assets/products_images/advantage_icon4.png",
+            "title": "易集成",
+            "text": "种语言的封装以及Demo，如C++、C#、Python、Java、go等，可根据具体需求进行选择。"
+          },
+          {
+            "index":"5",
+            "picActive":"/src/assets/products_images/advantage_icon5_active.png",
+            "pic": "/src/assets/products_images/advantage_icon5.png",
+            "title": "兼容性",
+            "text": "支持各种平台环境，包括Windows、Linux、Android多种操作系统，多种平台可共用特征库。"
+          },
+          {
+            "index":"6",
+            "picActive":"/src/assets/products_images/advantage_icon6_active.png",
+            "pic": "/src/assets/products_images/advantage_icon6.png",
+            "title": "易维护性",
+            "text": "SDK与模型分开，针对不同场景，无需改变SDK，只需替换对应场景的模型文件即可。"
+          }
+        ]
+      }
+    },
+    "applicationCases": {
+      "title": {
+        "subTitle": "scenarios",
+        "bigTitle": "应用场景"
+      },
+      "content": {
+        "text": "网吧、酒店、机场、驾校、火车站、人脸考勤等多种场合均适合本引擎。",
+        "caseList": [
+          {
+            "pic": "/src/assets/products_images/smart_application_pic1.jpg",
+            "title": "刷脸闸机",
+            "detail": "基于人脸识别，自动识别安检人物面部信息，并进行安检处理，从而提升产品用户体验。",
+            "coop": "合作案例：重庆江北国际机场"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic2.jpg",
+            "title": "人脸识别布控",
+            "detail": "基于人脸识别，自动识别人员信息和身份证信息是否匹配，有效防止冒用他人身份证信息，从而提升产品用户体验。",
+            "coop": "合作案例：重庆江北某网吧"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic3.jpg",
+            "title": "刷脸迎宾",
+            "detail": "基于人脸识别，自动识别为待入住人员信息，快速办理入住手续，从而提升产品用户体验。",
+            "coop": "合作案例：恒大酒店"
+          },
+          {
+            "pic": "/src/assets/products_images/smart_application_pic4.jpg",
+            "title": "互动营销",
+            "detail": "基于关键点、人脸属性值信息，匹配预先设定好的业务内容，可用于线上互动娱乐营销，如颜值比拼等。",
+            "coop": "合作案例：美颜相机"
+          }
+        ]
+      }
+    },
+    "download": {
+      "title": {
+        "subTitle": "download",
+        "bigTitle": "文档下载"
+      },
+      "content": {
+        "list": [
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "新手指南"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "技术白皮书"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "产品说明"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "操作手册"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "安装手册"
+          },
+          {
+            "url": "/src/assets/products_images/smart_application_pic1.jpg",
+            "name": "FAQ"
+          }
+        ]
+      }
+    },
+    "contactUs": {
+      "greetingWords": "我们期待与您携手,定义智慧生活，提升人类潜能！",
+      "smallWords": "现在注册，免费试用FaceDNA所有引擎能力，让你的应用读懂世界、认知世界、感知世界。"
+    }
+  },
+  "clientCase": {
+    "securityCase": {
+      "banner": {
+        "advertise": {
+          "biggerTitle": "安防客户案例",
+          "mediumTitle": "CLIENT-CASE",
+          "smallTitle": "行业用户、明星产品的首选，每日数千万调用测验。"
+        },
+        "picture": "/src/assets/clients_images/client_banner.jpg"
+      },
+      "typical": {
+        "title": {
+          "subTitle": "typical",
+          "bigTitle": "典型案例"
+        },
+        "content": {
+          "caseList": [
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：FaceGo-Smart"
+            },
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国建设银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国农业银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：人脸识别引擎"
+            }
+          ]
+        }
+      },
+      "moreCase": {
+        "title": {
+          "subTitle": "more",
+          "bigTitle": "更多案例"
+        },
+        "content": {
+          "caseList": [
+            {
+              "pic": "/src/assets/clients_images/more_case_pic1.png",
+              "title": "中国银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic2.png",
+              "title": "北京银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic3.png",
+              "title": "交通银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic4.png",
+              "title": "招商银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic5.png",
+              "title": "华夏银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic6.png",
+              "title": "广发银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic7.png",
+              "title": "兴业银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic8.png",
+              "title": "中国邮政",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic9.png",
+              "title": "深圳发展银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic10.png",
+              "title": "中信实业银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic11.png",
+              "title": "盛京银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic12.png",
+              "title": "中国民生银行",
+              "product": "使用产品：云之眼引擎"
+            }
+          ]
+        }
+      }
+    },
+    "financialCase": {
+      "banner": {
+        "advertise": {
+          "biggerTitle": "金融客户案例",
+          "mediumTitle": "CLIENT-CASE",
+          "smallTitle": "行业用户、明星产品的首选，每日数千万调用测验。"
+        },
+        "picture": "/src/assets/clients_images/client_banner.jpg"
+      },
+      "typical": {
+        "title": {
+          "subTitle": "typical",
+          "bigTitle": "典型案例"
+        },
+        "content": {
+          "caseList": [
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：FaceGo-Smart"
+            },
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国建设银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国农业银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：人脸识别引擎"
+            }
+          ]
+        }
+      },
+      "moreCase": {
+        "title": {
+          "subTitle": "more",
+          "bigTitle": "更多案例"
+        },
+        "content": {
+          "caseList": [
+            {
+              "pic": "/src/assets/clients_images/more_case_pic1.png",
+              "title": "中国银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic2.png",
+              "title": "北京银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic3.png",
+              "title": "交通银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic4.png",
+              "title": "招商银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic5.png",
+              "title": "华夏银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic6.png",
+              "title": "广发银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic7.png",
+              "title": "兴业银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic8.png",
+              "title": "中国邮政",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic9.png",
+              "title": "深圳发展银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic10.png",
+              "title": "中信实业银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic11.png",
+              "title": "盛京银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic12.png",
+              "title": "中国民生银行",
+              "product": "使用产品：云之眼引擎"
+            }
+          ]
+        }
+      }
+    },
+    "otherCase": {
+      "banner": {
+        "advertise": {
+          "biggerTitle": "其他客户案例",
+          "mediumTitle": "CLIENT-CASE",
+          "smallTitle": "行业用户、明星产品的首选，每日数千万调用测验。"
+        },
+        "picture": "/src/assets/clients_images/client_banner.jpg"
+      },
+      "typical": {
+        "title": {
+          "subTitle": "typical",
+          "bigTitle": "典型案例"
+        },
+        "content": {
+          "caseList": [
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：FaceGo-Smart"
+            },
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国建设银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/sec_typic_pic1.jpg",
+              "title": "中国农业银行",
+              "detail": "手机QQ是移动互联网领航级手机应用，服务超过5.7亿的月活跃用户。手Q中的名片识别功能由优图团队和手Q团队联合打造。在日常社交中，扫描下名片即可方便的保存好友姓名，电话，QQ号等信息。",
+              "product": "使用产品：人脸识别引擎"
+            }
+          ]
+        }
+      },
+      "moreCase": {
+        "title": {
+          "subTitle": "more",
+          "bigTitle": "更多案例"
+        },
+        "content": {
+          "caseList": [
+            {
+              "pic": "/src/assets/clients_images/more_case_pic1.png",
+              "title": "中国银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic2.png",
+              "title": "北京银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic3.png",
+              "title": "交通银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic4.png",
+              "title": "招商银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic5.png",
+              "title": "华夏银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic6.png",
+              "title": "广发银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic7.png",
+              "title": "兴业银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic8.png",
+              "title": "中国邮政",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic9.png",
+              "title": "深圳发展银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic10.png",
+              "title": "中信实业银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic11.png",
+              "title": "盛京银行",
+              "product": "使用产品：云之眼引擎"
+            },
+            {
+              "pic": "/src/assets/clients_images/more_case_pic12.png",
+              "title": "中国民生银行",
+              "product": "使用产品：云之眼引擎"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "coreTechnology": {
+    "bankCardRecog": {
+      "banner": {
+        "advertise": {
+          "biggerTitle": "银行卡识别",
+          "mediumTitle": "BANK-CARD",
+          "smallTitle": "自动识别卡号、有效期、发卡行等信息"
+        },
+        "picture": "/src/assets/technology_images/bankCard_banner.jpg"
+      },
+      "introduce": {
+        "title": {
+          "subTitle": "bankcard",
+          "bigTitle": "银行卡识别能力介绍"
+        },
+        "content": {
+          "pic": "/src/assets/technology_images/bankCard_intro_pic.jpg",
+          "title": "自动识别主流银行卡的卡号和有效期，同时返回发卡行、卡类型、卡名字等信息。",
+          "text": "云从科技的银行卡识别技术能自动获取用户银行卡卡号等关键信息，检测银行卡信息，并返回银行卡矩形框坐标和银行卡号码,并支持识别各个银行、不同类型的银行卡，支持任意角度的银行卡识别。"
+        }
+      },
+      "advantages": {
+        "title": {
+          "subTitle": "TECHNICAL",
+          "bigTitle": "技术优势"
+        },
+        "content": {
+          "advanList1": [
+            {
+              "index":"1",
+              "picActive":"/src/assets/products_images/advantage_icon1_active.png",
+              "pic": "/src/assets/products_images/advantage_icon1.png",
+              "title": "高精度",
+              "text": "基于云从科技业界领先的分析算法，卡号、有效期的准确率、召回率均超过90%。"
+            },
+            {
+              "index":"2",
+              "picActive":"/src/assets/products_images/advantage_icon2_active.png",
+              "pic": "/src/assets/products_images/advantage_icon2.png",
+              "title": "成熟稳定",
+              "text": "身份证识别服务已成功应用于银行等内部核心业务，接受过海量用户和复杂场景的考验，产品成熟稳定。"
+            },
+            {
+              "index":"3",
+              "picActive":"/src/assets/products_images/advantage_icon3_active.png",
+              "pic": "/src/assets/products_images/advantage_icon3.png",
+              "title": "适应性强",
+              "text": "适应多种实际应用中常见问题，例如光照条件差等，支持任意角度识别，支持识别各个银行、不同类型的银行卡。"
+            }
+          ]
+        }
+      },
+      "experience": {
+        "title": {
+          "subTitle": "experience",
+          "bigTitle": "功能体验"
+        },
+        "content": {
+          "text": "即刻体验人脸相似度对比的能力。请上传本地图片或提供图片URL。该功能演示是基于Compare API搭建的。如果您对技术能力有特别要求，请查看下方的产品目录或联系我们。",
+          "bankCardList": [
+            {
+              "pic": "/src/assets/products_images/advantage_icon1.png"
+            },
+            {
+              "pic": "/src/assets/products_images/advantage_icon1.png"
+            },
+            {
+              "pic": "/src/assets/products_images/advantage_icon1.png"
+            },
+            {
+              "pic": "/src/assets/products_images/advantage_icon1.png"
+            }
+          ]
+        }
+      },
+      "features": {
+        "title": {
+          "subTitle": "products",
+          "bigTitle": "银行卡识别功能产品目录"
+        },
+        "content": {
+          "text": "每个产品具有不同的核心功能，为满足各行业业务需求，将部分功能作为公用功能应用于各个产品中。",
+          "featuresList": [
+            {
+              "pic": "/src/assets/products_images/smart_fun_list1.jpg",
+              "title": "云从人眼认证身份服务引擎",
+              "text": "精准定位图中人脸，获得眼、口、鼻等72个关键点位置，能够快速准确的对人脸进行检测并定位，输出人脸在图片中的位置。该技术可适应不同角度、光照、表情、遮挡、年龄的人脸等各种实际环境。",
+              "btnDetail": "查看产品详情",
+              "btnDownLoad": "API文档下载"
+            }
+          ]
+        }
+      },
+      "useCases": {
+        "title": {
+          "subTitle": "scenarios",
+          "bigTitle": "应用场景"
+        },
+        "content": {
+          "text": "数以万计的开发者和客户采用云从科技能力引擎打造更智慧的应用。",
+          "caseList": [
+            {
+              "pic": "/src/assets/products_images/smart_application_pic1.jpg",
+              "title": "刷脸闸机",
+              "detail": "基于人脸识别，自动识别安检人物面部信息，并进行安检处理，从而提升产品用户体验。"
+            },
+            {
+              "pic": "/src/assets/products_images/smart_application_pic2.jpg",
+              "title": "人脸识别布控",
+              "detail": "基于人脸识别，自动识别人员信息和身份证信息是否匹配，有效防止冒用他人身份证信息，从而提升产品用户体验。"
+            },
+            {
+              "pic": "/src/assets/products_images/smart_application_pic3.jpg",
+              "title": "刷脸迎宾",
+              "detail": "基于人脸识别，自动识别为待入住人员信息，快速办理入住手续，从而提升产品用户体验。"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+#app {
+  // 主体区域
+  .main-container {
+    min-height: 100%;
+    transition: margin-left 0.28s;
+  }
+  // 导航栏
+  .navbar-container {
+    transition: all 0.28s;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      width: 100%;
+    }
+    .svg-icon {
+      margin-right: 16px;
+    }
+    .el-menu {
+      border: none;
+      width: 100%;
+    }
+  }
+
+  .el-submenu .el-menu-item {
+    min-width: 140px!important;
+    min-height: 40px;
+    line-height: 40px;
+    &:hover {
+      color: #dd3434!important;
+      background-color: #f4f4f4!important;
+    }
+  }
+  .el-menu--horizontal .el-submenu .el-submenu__title:hover{
+    border-bottom: 2px solid #dd3434!important;
+    color: #dd3434 !important;
+    background: transparent !important;
+  }
+
+  .el-menu--horizontal .el-submenu>.el-menu{
+    padding: 0;
+    top: 60px;
+    background: #f8f8f8;
+    text-align: center;
+    color: #646464;
+  }
+ .el-submenu__title{
+   color: #222!important;
+   & i{
+     display: none !important;
+   }
+ }
+ .el-menu{
+   min-width: 140px!important;
+   }
+
+  .el-submenu.is-active .el-submenu__title{
+    color: #dd3434!important;
+  }
+
+}
