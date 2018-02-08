@@ -6,7 +6,7 @@
       <el-button type="primary" @click="goodsMangage">货物管理</el-button>
       <el-button type="primary" @click="addRecordManager">添加记录</el-button>
       <div class="topInner"/>
-      <p>总出纳：{{this.totalCoast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;货物出纳：{{this.coast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运费支出：{{this.freight}}元</p>
+      <p>总款：{{this.totalCoast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;货款：{{this.coast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运费：{{this.freight}}元</p>
     </div>
 
     <div class="center">
@@ -352,6 +352,7 @@ export default {
     },
     saveRecord() {
       save(this.addRecord);
+      this.addRecordShow = false;
       this.submit();
     },
     removeRecord(val) {
