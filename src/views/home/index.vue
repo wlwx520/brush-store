@@ -6,7 +6,7 @@
       <el-button type="primary" @click="goodsMangage">货物管理</el-button>
       <el-button type="primary" @click="addRecordManager">添加记录</el-button>
       <div class="topInner"/>
-      <p>总花费：{{this.totalCoast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;货物花费：{{this.coast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运费：{{this.freight}}元</p>
+      <p>总出纳：{{this.totalCoast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;货物出纳：{{this.coast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运费支出：{{this.freight}}元</p>
     </div>
 
     <div class="center">
@@ -16,6 +16,7 @@
           <div class="block">
             <el-date-picker
               v-model="condition.datetime"
+              value-format="yyyy-MM-dd HH:mm:ss"
               type="datetimerange"
               range-separator="至"
               start-placeholder="开始日期"
@@ -81,7 +82,7 @@
         <el-table-column prop="freight" label="运费/元" align="center"></el-table-column>
         <el-table-column label="操作">
           <template slot-scope="scope">
-            <el-button type="primary" @click="removeRecord(scope.row)">查看详情</el-button>
+            <el-button type="primary" @click="removeRecord(scope.row)">删除该记录</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -192,7 +193,7 @@
 <script>
 /* eslint-disable */
 import { updateConfigure, getConfigure } from "@/api/configure";
-import { save, query } from "@/api/record";
+import { save, query, queryWithTime, remove } from "@/api/record";
 
 export default {
   data() {
@@ -201,7 +202,7 @@ export default {
       coast: 0,
       freight: 0,
       condition: {
-        datatime: [],
+        datetime: [],
         goods: "任意",
         partner: "任意",
         inOrOut: "任意"
@@ -248,25 +249,46 @@ export default {
       this.submit();
     },
     submit() {
-      query(
-        this.condition.goods,
-        this.condition.partner,
-        this.condition.inOrOut,
-        this.currrent,
-        this.size
-      ).then(resp => {
-        this.records = resp.data.records;
-        this.totalCoast = resp.data.coastSum + resp.data.freightSum;
-        this.coast = resp.data.coastSum;
-        this.freight = resp.data.freightSum;
-        this.total = resp.data.total;
-      });
+      if (
+        this.condition.datetime === null ||
+        this.condition.datetime.length === 0
+      ) {
+        query(
+          this.condition.goods,
+          this.condition.partner,
+          this.condition.inOrOut,
+          this.currrent,
+          this.size
+        ).then(resp => {
+          this.records = resp.data.records;
+          this.totalCoast = resp.data.coastSum + resp.data.freightSum;
+          this.coast = resp.data.coastSum;
+          this.freight = resp.data.freightSum;
+          this.total = resp.data.total;
+        });
+      } else {
+        queryWithTime(
+          this.condition.datetime[0],
+          this.condition.datetime[1],
+          this.condition.goods,
+          this.condition.partner,
+          this.condition.inOrOut,
+          this.currrent,
+          this.size
+        ).then(resp => {
+          this.records = resp.data.records;
+          this.totalCoast = resp.data.coastSum + resp.data.freightSum;
+          this.coast = resp.data.coastSum;
+          this.freight = resp.data.freightSum;
+          this.total = resp.data.total;
+        });
+      }
     },
     resetCondition() {
-      this.datatime = [];
-      this.goods = "任意";
-      this.partner = "任意";
-      this.inOrOut = "任意";
+      this.condition.datetime = [];
+      this.condition.goods = "任意";
+      this.condition.partner = "任意";
+      this.condition.inOrOut = "任意";
     },
     partnerMangager() {
       this.dialogAdd = "";
@@ -329,13 +351,17 @@ export default {
       this.addRecordShow = true;
     },
     saveRecord() {
-      console.log(this.addRecord);
       save(this.addRecord);
+      this.submit();
     },
-    removeRecord(val) {}
+    removeRecord(val) {
+      remove(val.id);
+      this.submit();
+    }
   },
   mounted() {
     this.configure();
+    this.submit();
   }
 };
 </script>
