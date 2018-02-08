@@ -80,7 +80,7 @@
         <el-table-column prop="univalent" label="单价/元" align="center"></el-table-column>
         <el-table-column prop="count" label="数量/千克" align="center"></el-table-column>
         <el-table-column prop="freight" label="运费/元" align="center"></el-table-column>
-        <el-table-column label="操作">
+        <el-table-column label="操作" align="center">
           <template slot-scope="scope">
             <el-button type="primary" @click="removeRecord(scope.row)">删除该记录</el-button>
           </template>
