@@ -4,6 +4,7 @@
     <div class="top">
       <el-button type="primary" @click="partnerMangager">伙伴管理</el-button>
       <el-button type="primary" @click="goodsMangage">货物管理</el-button>
+      <el-button type="primary" @click="addRecordManager">添加记录</el-button>
       <div class="topInner"/>
       <p>总花费：{{this.totalCoast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;货物花费：{{this.coast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运费：{{this.freight}}元</p>
     </div>
@@ -24,31 +25,31 @@
         </el-form-item>
 
         <el-form-item label="货物">
-          <el-select v-model="condition.goods" placeholder="">
-            <el-option>任意</el-option>
+          <el-select v-model="condition.goods" >
+            <el-option key="任意" label="任意" value="任意" ></el-option>
             <el-option
               v-for="item in goods"
               :key="item"
-              :label="item"
-              :value="item">
+              :label="item.name"
+              :value="item.name">
             </el-option>
           </el-select>
         </el-form-item>
 
         <el-form-item label="伙伴">
-          <el-select v-model="condition.partner" placeholder="">
-            <el-option>任意</el-option>
+          <el-select v-model="condition.partner" >
+            <el-option key="任意" label="任意" value="任意" ></el-option>
             <el-option
               v-for="item in partner"
               :key="item"
-              :label="item"
-              :value="item">
+              :label="item.name"
+              :value="item.name">
             </el-option>
           </el-select>
         </el-form-item>
 
         <el-form-item label="状态">
-          <el-select v-model="condition.inOrOut" placeholder="">
+          <el-select v-model="condition.inOrOut" >
             <el-option
               v-for="item in inOrOut"
               :key="item"
@@ -59,11 +60,11 @@
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary">查询</el-button>
+          <el-button type="primary" @click="submit">查询</el-button>
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary">重置</el-button>
+          <el-button type="primary" @click="resetCondition">重置</el-button>
         </el-form-item>
 
       </el-form>
@@ -108,9 +109,6 @@
               <el-form-item>
                 <el-button type="primary" @click="dialogListAdd" >新增</el-button>
               </el-form-item>
-              <el-form-item>
-                <el-button type="primary" @click="dialogListSave">保存</el-button>
-              </el-form-item>
             </el-form>
           </div>
           <div class="dialogCenter">
@@ -131,23 +129,57 @@
       <el-dialog title="添加记录" :visible.sync="addRecordShow" width="500px" center>
         <div class="addRecord">
           <el-form :inline="true" :model="addRecord">
-            <el-form-item label="货物">
-              <el-input v-model="addRecord.goods"></el-input>
+            <el-form-item label="时间" label-width="100px">
+               <div class="block">
+                  <el-date-picker
+                    v-model="addRecord.time"
+                    type="datetime"
+                    value-format="yyyy-MM-dd HH:mm:ss"
+                    placeholder="选择日期时间">
+                  </el-date-picker>
+              </div>
             </el-form-item>
-            <el-form-item label="伙伴">
-              <el-input v-model="addRecord.partner"></el-input>
+            <el-form-item label="货物" label-width="100px">
+              <el-select v-model="addRecord.goods" placeholder="请选择货物">
+                <el-option
+                  v-for="item in goods"
+                  :key="item"
+                  :label="item.name"
+                  :value="item.name">
+                </el-option>
+              </el-select>
             </el-form-item>
-            <el-form-item label="状态">
-              <el-input v-model="addRecord.inOrOut"></el-input>
+            <el-form-item label="伙伴" label-width="100px">
+              <el-select v-model="addRecord.partner" placeholder="请选择伙伴">
+                <el-option
+                  v-for="item in partner"
+                  :key="item"
+                  :label="item.name"
+                  :value="item.name">
+                </el-option>
+              </el-select>
             </el-form-item>
-            <el-form-item label="单价/元">
+            <el-form-item label="状态" label-width="100px" >
+              <el-select v-model="addRecord.inOrOut" placeholder="请选择状态">
+                <el-option
+                  v-for="item in inOrOut2"
+                  :key="item"
+                  :label="item"
+                  :value="item">
+                </el-option>
+              </el-select>
+            </el-form-item>
+            <el-form-item label="单价/元" label-width="100px">
               <el-input v-model="addRecord.univalent"></el-input>
             </el-form-item>
-            <el-form-item label="数量/千克">
+            <el-form-item label="数量/千克" label-width="100px">
               <el-input v-model="addRecord.count"></el-input>
             </el-form-item>
-            <el-form-item label="运费/元">
+            <el-form-item label="运费/元" label-width="100px">
               <el-input v-model="addRecord.freight"></el-input>
+            </el-form-item>
+            <el-form-item label="   " label-width="100px">
+                 <el-button type="primary" @click="saveRecord">保存</el-button>
             </el-form-item>
           </el-form>
         </div>
@@ -159,7 +191,8 @@
 
 <script>
 /* eslint-disable */
-import { updateConfigure } from "@/api/configure";
+import { updateConfigure, getConfigure } from "@/api/configure";
+import { save, query } from "@/api/record";
 
 export default {
   data() {
@@ -180,17 +213,32 @@ export default {
       goods: [],
       partner: [],
       inOrOut: ["任意", "进货", "出货"],
+      inOrOut2: ["进货", "出货"],
       dialogList: [],
       loading: false,
       dialogTitle: "",
       dialogShow: false,
       dialogAdd: "",
       addRecordShow: false,
-      addRecord: {}
+      addRecord: {
+        time: "",
+        goods: "",
+        partner: "",
+        inOrOut: "",
+        univalent: "",
+        count: "",
+        freight: ""
+      }
     };
   },
-  computed: {},
+
   methods: {
+    configure() {
+      getConfigure().then(resp => {
+        this.partner = resp.data.partner;
+        this.goods = resp.data.goods;
+      });
+    },
     handleSizeChange(val) {
       this.size = val;
       this.submit();
@@ -200,32 +248,50 @@ export default {
       this.submit();
     },
     submit() {
-      //
+      query(
+        this.condition.goods,
+        this.condition.partner,
+        this.condition.inOrOut,
+        this.currrent,
+        this.size
+      ).then(resp => {
+        this.records = resp.data.records;
+        this.totalCoast = resp.data.coastSum + resp.data.freightSum;
+        this.coast = resp.data.coastSum;
+        this.freight = resp.data.freightSum;
+        this.total = resp.data.total;
+      });
+    },
+    resetCondition() {
+      this.datatime = [];
+      this.goods = "任意";
+      this.partner = "任意";
+      this.inOrOut = "任意";
     },
     partnerMangager() {
+      this.dialogAdd = "";
       this.dialogShow = true;
       this.dialogTitle = "伙伴";
       this.dialogList = this.partner;
     },
     goodsMangage() {
+      this.dialogAdd = "";
       this.dialogShow = true;
       this.dialogTitle = "货物";
       this.dialogList = this.goods;
-    },
-    dialogListSave() {
-      updateConfigure(this.goods, this.partner);
     },
     dialogListAdd() {
       var obj = {};
       obj.name = this.dialogAdd;
       if (this.dialogTitle === "伙伴") {
         this.partner.push(obj);
-        this.partnerMangager();
+        this.dialogList = this.partner;
       }
       if (this.dialogTitle === "货物") {
         this.goods.push(obj);
-        this.goodsMangage();
+        this.dialogList = this.goods;
       }
+      updateConfigure(this.goods, this.partner);
     },
     dialogListRemove(val) {
       Array.prototype.indexOf = function(val) {
@@ -248,8 +314,28 @@ export default {
         this.goods.remove(val);
         this.goodsMangage();
       }
+      updateConfigure(this.goods, this.partner);
+    },
+    addRecordManager() {
+      this.addRecord = {
+        time: "",
+        goods: "",
+        partner: "",
+        inOrOut: "",
+        univalent: "",
+        count: "",
+        freight: ""
+      };
+      this.addRecordShow = true;
+    },
+    saveRecord() {
+      console.log(this.addRecord);
+      save(this.addRecord);
     },
     removeRecord(val) {}
+  },
+  mounted() {
+    this.configure();
   }
 };
 </script>
