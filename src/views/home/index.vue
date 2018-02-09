@@ -11,7 +11,7 @@
     </div>
 
     <div class="center">
-      <el-form :inline="true" :model="condition" ref="myform" >
+      <el-form :inline="true" :model="condition" >
 
         <el-form-item label="记录时间">
           <div class="block">
@@ -128,9 +128,9 @@
     </div>
 
     <div>
-      <el-dialog title="添加记录" :visible.sync="addRecordShow" width="500px" center>
+      <el-dialog title="添加记录" :visible.sync="addRecordShow" width="500px" center @close="submit">
         <div class="addRecord">
-          <el-form :inline="true" :model="addRecord">
+          <el-form :inline="true" :model="addRecord" :rules="recodRules" ref="addRecordForm">
             <el-form-item label="时间" label-width="100px">
                <div class="block">
                   <el-date-picker
@@ -141,8 +141,8 @@
                   </el-date-picker>
               </div>
             </el-form-item>
-            <el-form-item label="货物" label-width="100px">
-              <el-select v-model="addRecord.goods" placeholder="请选择货物">
+            <el-form-item label="货物" label-width="100px" porp="goods" >
+              <el-select v-model="addRecord.goods" placeholder="请选择货物" >
                 <el-option
                   v-for="item in goods"
                   :key="item"
@@ -151,8 +151,8 @@
                 </el-option>
               </el-select>
             </el-form-item>
-            <el-form-item label="伙伴" label-width="100px">
-              <el-select v-model="addRecord.partner" placeholder="请选择伙伴">
+            <el-form-item label="伙伴" label-width="100px" porp="partner" >
+              <el-select v-model="addRecord.partner" placeholder="请选择伙伴" >
                 <el-option
                   v-for="item in partner"
                   :key="item"
@@ -161,8 +161,8 @@
                 </el-option>
               </el-select>
             </el-form-item>
-            <el-form-item label="状态" label-width="100px" >
-              <el-select v-model="addRecord.inOrOut" placeholder="请选择状态">
+            <el-form-item label="状态" label-width="100px" porp="inOrOut" >
+              <el-select v-model="addRecord.inOrOut" placeholder="请选择状态" >
                 <el-option
                   v-for="item in inOrOut2"
                   :key="item"
@@ -171,13 +171,13 @@
                 </el-option>
               </el-select>
             </el-form-item>
-            <el-form-item label="单价/元" label-width="100px">
-              <el-input v-model="addRecord.univalent"></el-input>
+            <el-form-item label="单价/元" label-width="100px" prop="univalent" >
+              <el-input v-model="addRecord.univalent" ></el-input>
             </el-form-item>
-            <el-form-item label="数量/千克" label-width="100px">
+            <el-form-item label="数量/千克" label-width="100px" prop="count" >
               <el-input v-model="addRecord.count"></el-input>
             </el-form-item>
-            <el-form-item label="运费/元" label-width="100px">
+            <el-form-item label="运费/元" label-width="100px" prop="freight" >
               <el-input v-model="addRecord.freight"></el-input>
             </el-form-item>
             <el-form-item label="   " label-width="100px">
@@ -189,7 +189,7 @@
     </div>
 
     <div>
-      <el-dialog title="余额管理" :visible.sync="balanceShow" width="700px" center>
+      <el-dialog title="余额管理" :visible.sync="balanceShow" width="700px" center @close="submit">
         <div class="balance">
           <div class="balanceTop">
             <el-form :inline="true" :model="balance" ref="myBalance" >
@@ -237,10 +237,10 @@
     </div>
 
     <div>
-      <el-dialog title="修改余额" :visible.sync="balanceUpdateShow" width="500px" center>
-        <el-form :inline="true" :model="balanceUpdateForm" ref="myform" >
-          <el-form-item label="货物" label-width="100px">
-            <el-select v-model="balanceUpdateForm.goods" placeholder="请选择货物">
+      <el-dialog title="修改余额" :visible.sync="balanceUpdateShow" width="500px" center @close="balanceQueryClick">
+        <el-form :inline="true" :model="balanceUpdateForm" ref="balanceForm" :rules="balanceRules">
+          <el-form-item label="货物" label-width="100px" prop="goods">
+            <el-select v-model="balanceUpdateForm.goods" placeholder="请选择货物" >
               <el-option
                 v-for="item in goods"
                 :key="item"
@@ -249,7 +249,7 @@
               </el-option>
             </el-select>
           </el-form-item>
-          <el-form-item label="伙伴" label-width="100px">
+          <el-form-item label="伙伴" label-width="100px" prop="partner">
             <el-select v-model="balanceUpdateForm.partner" placeholder="请选择伙伴">
               <el-option
                 v-for="item in partner"
@@ -260,10 +260,16 @@
             </el-select>
           </el-form-item>
           <el-form-item label="余额值" label-width="100px">
-            <el-input v-model="balanceUpdateForm.balance" placeholder="正数为增加，负数为减少"></el-input>
+            <el-input v-model="balanceUpdateForm.balance" disabled="disabled"></el-input>
           </el-form-item>
-          <el-form-item label="修改值" label-width="100px">
-            <el-input v-model="balanceUpdateForm.update" placeholder="正数为增加，负数为减少"></el-input>
+          <el-form-item label="修改值" label-width="100px" prop="update">
+            <el-input v-model="balanceUpdateForm.update" placeholder="请输入需要修改的值"></el-input>
+          </el-form-item>
+          <el-form-item label="增或减" label-width="100px" prop="type">
+            <el-select v-model="balanceUpdateForm.type" placeholder="请选择增加或减少">
+              <el-option key="增加" label="增加" value="增加"></el-option>
+              <el-option key="减少" label="减少" value="减少"></el-option>
+            </el-select>
           </el-form-item>
           <el-form-item label="   " label-width="100px">
             <el-button type="primary" @click="updateBalance">保存</el-button>
@@ -283,13 +289,48 @@ import { balanceQuery, balanceUpdate } from "@/api/balance";
 
 export default {
   data() {
+    var float_validator = (rule, value, callback) => {
+      var re = /^\d+(\.\d{1,2})?$/;
+      if (!re.test(value)) {
+        callback(new Error("该值必须在0-999999之间的两位小数"));
+      } else if (value < 0 || value > 999999) {
+        callback(new Error("该值必须在0-999999之间的两位小数"));
+      } else {
+        callback();
+      }
+    };
+
+    var null_validator = (rule, value, callback) => {
+      var re = /^\d+(\.\d{1,2})?$/;
+      if (value === null || value === "") {
+        callback(new Error("该项不能为空"));
+      } else {
+        callback();
+      }
+    };
+
     return {
+      recodRules: {
+        univalent: [{ validator: float_validator, trigger: "blur" }],
+        count: [{ validator: float_validator, trigger: "blur" }],
+        freight: [{ validator: float_validator, trigger: "blur" }],
+        goods: [{ validator: null_validator, trigger: "blur" }],
+        partner: [{ validator: null_validator, trigger: "blur" }],
+        inOrOut: [{ validator: null_validator, trigger: "blur" }]
+      },
+      balanceRules: {
+        update: [{ validator: float_validator, trigger: "blur" }],
+        goods: [{ validator: null_validator, trigger: "blur" }],
+        partner: [{ validator: null_validator, trigger: "blur" }],
+        type: [{ validator: null_validator, trigger: "blur" }]
+      },
       balanceUpdateShow: false,
       balanceUpdateForm: {
         goods: "",
         partner: "",
         update: "",
-        balance: ""
+        balance: "",
+        type: ""
       },
       balance: {},
       balanceLoading: false,
@@ -457,15 +498,22 @@ export default {
         freight: ""
       };
       this.addRecordShow = true;
+      if (this.$refs.addRecordForm) {
+        this.$refs.addRecordForm.resetFields();
+      }
     },
     saveRecord() {
-      save(this.addRecord);
-      this.addRecordShow = false;
-      this.submit();
+      this.$refs.addRecordForm.validate(valid => {
+        if (valid) {
+          save(this.addRecord);
+          this.addRecordShow = false;
+          this.submit();
+        }
+      });
     },
     removeRecord(val) {
       remove(val.id);
-      this.submit();
+      window.location.reload();
     },
     balanceQueryClick() {
       this.balanceLoading = true;
@@ -480,15 +528,27 @@ export default {
       this.balanceUpdateForm.partner = val.partner;
       this.balanceUpdateForm.balance = val.balance;
       this.balanceUpdateForm.update = "";
+      if (this.$refs.balanceForm) {
+        this.$refs.balanceForm.resetFields();
+      }
     },
     updateBalance() {
-      balanceUpdate(
-        this.balanceUpdateForm.goods,
-        this.balanceUpdateForm.partner,
-        this.balanceUpdateForm.update
-      );
-      this.balanceUpdateShow = false;
-      setTimeout(this.balanceQueryClick(), 100);
+      this.$refs.balanceForm.validate(valid => {
+        if (valid) {
+          var update0 = 0;
+          if (this.balanceUpdateForm.type === "减少") {
+            update0 = 0 - this.balanceUpdateForm.update;
+          } else {
+            update0 = this.balanceUpdateForm.update;
+          }
+          balanceUpdate(
+            this.balanceUpdateForm.goods,
+            this.balanceUpdateForm.partner,
+            update0
+          );
+          this.balanceUpdateShow = false;
+        }
+      });
     }
   },
   mounted() {
