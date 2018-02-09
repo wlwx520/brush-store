@@ -5,12 +5,13 @@
       <el-button type="primary" @click="partnerMangager">伙伴管理</el-button>
       <el-button type="primary" @click="goodsMangage">货物管理</el-button>
       <el-button type="primary" @click="addRecordManager">添加记录</el-button>
+      <el-button type="primary" @click="balanceManager">余额管理</el-button>
       <div class="topInner"/>
       <p>总款：{{this.totalCoast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;货款：{{this.coast}}元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运费：{{this.freight}}元</p>
     </div>
 
     <div class="center">
-      <el-form :inline="true" :model="condition" ref="myform">
+      <el-form :inline="true" :model="condition" ref="myform" >
 
         <el-form-item label="记录时间">
           <div class="block">
@@ -187,6 +188,90 @@
       </el-dialog>
     </div>
 
+    <div>
+      <el-dialog title="余额管理" :visible.sync="balanceShow" width="700px" center>
+        <div class="balance">
+          <div class="balanceTop">
+            <el-form :inline="true" :model="balance" ref="myBalance" >
+              <el-form-item label="货物">
+                 <el-select v-model="balance.goods" >
+                  <el-option key="任意" label="任意" value="任意" ></el-option>
+                  <el-option
+                    v-for="item in goods"
+                    :key="item"
+                    :label="item.name"
+                    :value="item.name">
+                  </el-option>
+                </el-select>
+              </el-form-item>
+              <el-form-item label="伙伴">
+                <el-select v-model="balance.partner" >
+                  <el-option key="任意" label="任意" value="任意" ></el-option>
+                  <el-option
+                    v-for="item in partner"
+                    :key="item"
+                    :label="item.name"
+                    :value="item.name">
+                  </el-option>
+                </el-select>
+              </el-form-item>
+              <el-form-item>
+                <el-button type="primary" @click="balanceQueryClick" >查询</el-button>
+              </el-form-item>
+            </el-form>
+          </div>
+          <div class="balanceCenter">
+            <el-table :data="balanceList" v-loading="balanceLoading" element-loading-text="加载中,请等待">
+              <el-table-column prop="goods" label="货物" align="center"></el-table-column>
+              <el-table-column prop="partner" label="伙伴" align="center"></el-table-column>
+              <el-table-column prop="balance" label="余额/元" align="center"></el-table-column>
+              <el-table-column label="操作" align="center">
+                <template slot-scope="scope">
+                  <el-button type="primary" @click="balanceUpdate(scope.row)">修改余额</el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </div>
+        </div>
+      </el-dialog>
+    </div>
+
+    <div>
+      <el-dialog title="修改余额" :visible.sync="balanceUpdateShow" width="500px" center>
+        <el-form :inline="true" :model="balanceUpdateForm" ref="myform" >
+          <el-form-item label="货物" label-width="100px">
+            <el-select v-model="balanceUpdateForm.goods" placeholder="请选择货物">
+              <el-option
+                v-for="item in goods"
+                :key="item"
+                :label="item.name"
+                :value="item.name">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="伙伴" label-width="100px">
+            <el-select v-model="balanceUpdateForm.partner" placeholder="请选择伙伴">
+              <el-option
+                v-for="item in partner"
+                :key="item"
+                :label="item.name"
+                :value="item.name">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item label="余额值" label-width="100px">
+            <el-input v-model="balanceUpdateForm.balance" placeholder="正数为增加，负数为减少"></el-input>
+          </el-form-item>
+          <el-form-item label="修改值" label-width="100px">
+            <el-input v-model="balanceUpdateForm.update" placeholder="正数为增加，负数为减少"></el-input>
+          </el-form-item>
+          <el-form-item label="   " label-width="100px">
+            <el-button type="primary" @click="updateBalance">保存</el-button>
+          </el-form-item>
+        </el-form>
+      </el-dialog>
+    </div>
+
   </div>
 </template>
 
@@ -194,10 +279,22 @@
 /* eslint-disable */
 import { updateConfigure, getConfigure } from "@/api/configure";
 import { save, query, queryWithTime, remove } from "@/api/record";
+import { balanceQuery, balanceUpdate } from "@/api/balance";
 
 export default {
   data() {
     return {
+      balanceUpdateShow: false,
+      balanceUpdateForm: {
+        goods: "",
+        partner: "",
+        update: "",
+        balance: ""
+      },
+      balance: {},
+      balanceLoading: false,
+      balanceList: [],
+      balanceShow: false,
       totalCoast: 0,
       coast: 0,
       freight: 0,
@@ -249,6 +346,7 @@ export default {
       this.submit();
     },
     submit() {
+      this.loading = true;
       if (
         this.condition.datetime === null ||
         this.condition.datetime.length === 0
@@ -265,6 +363,7 @@ export default {
           this.coast = resp.data.coastSum;
           this.freight = resp.data.freightSum;
           this.total = resp.data.total;
+          this.loading = false;
         });
       } else {
         queryWithTime(
@@ -281,6 +380,7 @@ export default {
           this.coast = resp.data.coastSum;
           this.freight = resp.data.freightSum;
           this.total = resp.data.total;
+          this.loading = false;
         });
       }
     },
@@ -301,6 +401,14 @@ export default {
       this.dialogShow = true;
       this.dialogTitle = "货物";
       this.dialogList = this.goods;
+    },
+    balanceManager() {
+      this.balanceShow = true;
+      this.balance = {
+        goods: "任意",
+        partner: "任意"
+      };
+      this.balanceQueryClick();
     },
     dialogListAdd() {
       var obj = {};
@@ -358,6 +466,29 @@ export default {
     removeRecord(val) {
       remove(val.id);
       this.submit();
+    },
+    balanceQueryClick() {
+      this.balanceLoading = true;
+      balanceQuery(this.balance.goods, this.balance.partner).then(resp => {
+        this.balanceList = resp.data.balance;
+        this.balanceLoading = false;
+      });
+    },
+    balanceUpdate(val) {
+      this.balanceUpdateShow = true;
+      this.balanceUpdateForm.goods = val.goods;
+      this.balanceUpdateForm.partner = val.partner;
+      this.balanceUpdateForm.balance = val.balance;
+      this.balanceUpdateForm.update = "";
+    },
+    updateBalance() {
+      balanceUpdate(
+        this.balanceUpdateForm.goods,
+        this.balanceUpdateForm.partner,
+        this.balanceUpdateForm.update
+      );
+      this.balanceUpdateShow = false;
+      setTimeout(this.balanceQueryClick(), 100);
     }
   },
   mounted() {
@@ -391,14 +522,29 @@ export default {
 .dialog {
   margin-top: 10px;
   margin-left: 10px;
-  overflow: hidden;
-  max-height: 500px;
+  overflow: auto;
+  max-height: 300px;
 }
 .dialogTop {
   margin-top: 10px;
   margin-left: 10px;
 }
 .dialogCenter {
+  margin-top: 10px;
+  margin-left: 10px;
+  overflow-y: auto;
+}
+.balance {
+  margin-top: 10px;
+  margin-left: 10px;
+  overflow: auto;
+  max-height: 300px;
+}
+.balanceTop {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.balanceCenter {
   margin-top: 10px;
   margin-left: 10px;
   overflow-y: auto;
