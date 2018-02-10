@@ -278,6 +278,15 @@
       </el-dialog>
     </div>
 
+    <div>
+      <el-dialog :title="ensureTitle" :visible.sync="ensureShow" width="500px" center>
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="cancel">取消</el-button>
+          <el-button type="danger" @click="ensure">删除</el-button>
+        </span>
+      </el-dialog>
+    </div>
+
   </div>
 </template>
 
@@ -310,6 +319,10 @@ export default {
     };
 
     return {
+      ensureShow: false,
+      ensureTitle: "",
+      ensureType: 0,
+      ensureData: "",
       recodRules: {
         univalent: [{ validator: float_validator, trigger: "blur" }],
         count: [{ validator: float_validator, trigger: "blur" }],
@@ -465,27 +478,10 @@ export default {
       updateConfigure(this.goods, this.partner);
     },
     dialogListRemove(val) {
-      Array.prototype.indexOf = function(val) {
-        for (var i = 0; i < this.length; i++) {
-          if (this[i] == val) return i;
-        }
-        return -1;
-      };
-      Array.prototype.remove = function(val) {
-        var index = this.indexOf(val);
-        if (index > -1) {
-          this.splice(index, 1);
-        }
-      };
-      if (this.dialogTitle === "伙伴") {
-        this.partner.remove(val);
-        this.partnerMangager();
-      }
-      if (this.dialogTitle === "货物") {
-        this.goods.remove(val);
-        this.goodsMangage();
-      }
-      updateConfigure(this.goods, this.partner);
+      this.ensureShow = true;
+      this.ensureTitle = "确定删除该记录？";
+      this.ensureType = 2;
+      this.ensureData = val;
     },
     addRecordManager() {
       this.addRecord = {
@@ -512,8 +508,10 @@ export default {
       });
     },
     removeRecord(val) {
-      remove(val.id);
-      window.location.reload();
+      this.ensureShow = true;
+      this.ensureTitle = "确定删除该记录？";
+      this.ensureType = 1;
+      this.ensureData = val;
     },
     balanceQueryClick() {
       this.balanceLoading = true;
@@ -549,6 +547,42 @@ export default {
           this.balanceUpdateShow = false;
         }
       });
+    },
+    cancel() {
+      this.ensureShow = false;
+    },
+    ensure() {
+      var val = this.ensureData;
+      this.ensureShow = false;
+      if (this.ensureType === 1) {
+        remove(val.id);
+        window.location.reload();
+      } else if (this.ensureType === 2) {
+        Array.prototype.indexOf = function(val) {
+          for (var i = 0; i < this.length; i++) {
+            if (this[i] == val) return i;
+          }
+          return -1;
+        };
+        Array.prototype.remove = function(val) {
+          var index = this.indexOf(val);
+          if (index > -1) {
+            this.splice(index, 1);
+          }
+        };
+        if (this.dialogTitle === "伙伴") {
+          this.partner.remove(val);
+          this.partnerMangager();
+        }
+        if (this.dialogTitle === "货物") {
+          this.goods.remove(val);
+          this.goodsMangage();
+        }
+        updateConfigure(this.goods, this.partner);
+      } else {
+        //do nothing
+      }
+      this.ensureType = 0;
     }
   },
   mounted() {
@@ -607,7 +641,7 @@ export default {
 .balanceCenter {
   margin-top: 10px;
   margin-left: 10px;
-  overflow-y: auto;
+  z: auto;
 }
 .addRecord {
   margin-top: 10px;
