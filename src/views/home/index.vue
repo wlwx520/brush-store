@@ -555,8 +555,9 @@ export default {
       var val = this.ensureData;
       this.ensureShow = false;
       if (this.ensureType === 1) {
-        remove(val.id);
-        window.location.reload();
+        remove(val.id).then(resp => {
+          window.location.reload();
+        });
       } else if (this.ensureType === 2) {
         Array.prototype.indexOf = function(val) {
           for (var i = 0; i < this.length; i++) {
