@@ -39,7 +39,7 @@ export function query(goods, partner, inOrOut, current, size) {
     })
 }
 
-export function remove (id) {
+export function remove(id) {
     return request({
         url: '/record/delete',
         method: 'post',

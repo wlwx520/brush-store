@@ -69,6 +69,10 @@
           <el-button type="primary" @click="resetCondition">重置</el-button>
         </el-form-item>
 
+        <el-form-item>
+          <el-button type="primary" @click="exportToExcel">导出成表格</el-button>
+        </el-form-item>
+
       </el-form>
     </div>
 
@@ -293,7 +297,14 @@
 <script>
 /* eslint-disable */
 import { updateConfigure, getConfigure } from "@/api/configure";
-import { save, query, queryWithTime, remove } from "@/api/record";
+import {
+  save,
+  query,
+  queryWithTime,
+  remove,
+  exportExcel,
+  exportExcelWithTime
+} from "@/api/record";
 import { balanceQuery, balanceUpdate } from "@/api/balance";
 
 export default {
@@ -584,6 +595,20 @@ export default {
         //do nothing
       }
       this.ensureType = 0;
+    },
+    exportToExcel() {
+      var str = "http://localhost:9528/record/export";
+      str += "?goods=" + this.condition.goods;
+      str += "&partner=" + this.condition.partner;
+      str += "&inOrOut=" + this.condition.inOrOut;
+      if (
+        this.condition.datetime != null &&
+        this.condition.datetime.length != 0
+      ) {
+        str += "&startTime=" + this.condition.datetime[0];
+        str += "&endTime=" + this.condition.datetime[1];
+      }
+      window.location.href = str;
     }
   },
   mounted() {
